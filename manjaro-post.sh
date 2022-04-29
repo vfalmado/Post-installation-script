@@ -22,6 +22,7 @@ flatpak install flathub com.bitwarden.desktop -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub org.kde.tellico -y
 flatpak install flathub org.gnome.Epiphany -y
+flatpak install flathub org.kde.akregator -y
 
 # Updating system keys
 
