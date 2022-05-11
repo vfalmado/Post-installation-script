@@ -6,7 +6,7 @@ The script handles the system keys and updates before installing any packages an
 
 ## Installed packages
 Flatpaks and Snaps are needed for the script to work, which must be previously enabled.
-**Snaps:** Authy and SuperProductivity
+**Snaps:** Authy
 **Flatpaks:** Akregator, Bitwarden, Discord, Chromium, Todoist, Kdenlive, GIMP, Joplin, Mendeley, Spotify, Steam and Tellico
 **Official repository:** LibreOffice, Lutris and Telegram
 
