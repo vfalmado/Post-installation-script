@@ -7,7 +7,7 @@ The script handles the system keys and updates before installing any packages an
 ## Installed packages
 Flatpaks and Snaps are needed for the script to work, which must be previously enabled.
 **Snaps:** Authy
-**Flatpaks:** Akregator, Bitwarden, Discord, Todoist, Kdenlive, GIMP, Joplin, Mendeley, Spotify, Steam and Tellico
+**Flatpaks:** Akregator, Bitwarden, Discord, Todoist, Kdenlive, GIMP, Joplin, Mendeley, OBS Studio, Spotify, Steam and Tellico
 **Official repository:** Firefox Developer Edition, LibreOffice, Lutris and Telegram
 
 ## Uninstalled packages
@@ -22,7 +22,7 @@ Tanto as atualizações do sistema quando das chaves são realizadas duas vezes,
 ## Pacotes instalados
 Para funcionar corretamente, tanto Flatpaks quanto Snaps devem ser previamente ativados, uma vez que esse procedimento não é realizado pelo script.
 **Snaps:** Authy
-**Flatpaks:** Akregator, Bitwarden, Discord, Epiphany Browser, GIMP, Joplin, Mendeley, Spotify, Steam e Tellico
+**Flatpaks:** Akregator, Bitwarden, Discord, Epiphany Browser, GIMP, Joplin, Mendeley, OBS Studio, Spotify, Steam e Tellico
 **Official repository:** Firefox Developer Edition, LibreOffice, Lutris e Telegram
 
 ## Pacotes desinstalados
