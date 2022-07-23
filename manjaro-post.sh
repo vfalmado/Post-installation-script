@@ -24,6 +24,7 @@ flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.kde.akregator -y
 flatpak install flathub com.todoist.Todoist -y
 flatpak install flathub com.obsproject.Studio -y
+flatpak install flathub com.rtosta.zapzap -y
 
 # Updating system keys
 
