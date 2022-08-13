@@ -1,14 +1,14 @@
 #!/bin/bash
 
-#Script de pós instalação para Manjaro
+# Script de pós instalação para Manjaro
 
 # System update
 
-sudo pacman -Syu -s
+sudo pacman -Syu
 
 # Installing Snap packages
 
-sudo snap install authy
+sudo snap install authy multipass
 
 # Installing flatpak packages
 
@@ -22,31 +22,31 @@ flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub org.kde.tellico -y
 flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub org.kde.akregator -y
-flatpak install flathub com.todoist.Todoist -y
-flatpak install flathub com.obsproject.Studio -y
-flatpak install flathub com.rtosta.zapzap -y
+flatpak install flathub com.gitlab.davem.ClamTk -y
+sudo freshclam
+
+# Downloading PhotoGIMP
+
+wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
 
 # Updating system keys
 
-sudo pacman -Sy archlinux-keyring manjaro-keyring -s
-sudo pacman-key --populate archlinux manjaro
-sudo pacman-key --refresh-keys
+# sudo pacman -Sy archlinux-keyring manjaro-keyring
+# sudo pacman-key --populate archlinux manjaro
+# sudo pacman-key --refresh-keys
 
 # Installing Pamac packages
 
-pamac install telegram-desktop -s
-pamac install Libreoffice-fresh -s
-pamac install lutris -s
-pamac install firefox-developer-edition -s
+pamac install telegram-desktop libreoffice-fresh lutris firefox-developer-edition gparted
 
 # Updating system keys
 
-sudo pacman -Sy archlinux-keyring manjaro-keyring -s
-sudo pacman-key --populate archlinux manjaro
-sudo pacman-key --refresh-keys
+# sudo pacman -Sy archlinux-keyring manjaro-keyring
+# sudo pacman-key --populate archlinux manjaro
+# sudo pacman-key --refresh-keys
 
 #System update
 
-sudo pacman -Syu -s
+sudo pacman -Syu
 
 echo Pós-instalação finalizada com sucesso!
