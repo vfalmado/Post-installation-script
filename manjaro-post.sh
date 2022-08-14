@@ -37,7 +37,7 @@ wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Di
 
 # Installing Pamac packages
 
-pamac install telegram-desktop libreoffice-fresh lutris firefox-developer-edition gparted
+pamac install telegram-desktop libreoffice-fresh lutris firefox-developer-edition gparted teamviewer
 
 # Updating system keys
 
