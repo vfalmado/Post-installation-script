@@ -9,6 +9,7 @@ Flatpaks and Snaps are needed for the script to work, which must be previously e
 **Snaps:** Authy and Multipass
 **Flatpaks:** Akregator, Bitwarden, ClamTK, Discord, Todoist, Kdenlive, GIMP, Joplin, Mendeley, OBS Studio, Spotify, Steam, Tellico and ZapZap
 **Official repository:** GParted, Firefox Developer Edition, LibreOffice, Lutris and Telegram
+**AUR:** TeamViewer
 
 ## Uninstalled packages
 No packages are currently uninstalled.
@@ -24,6 +25,7 @@ Para funcionar corretamente, tanto Flatpaks quanto Snaps devem ser previamente a
 **Snaps:** Authy e Multipass
 **Flatpaks:** Akregator, Bitwarden, ClamTK, Discord, Epiphany Browser, GIMP, Joplin, Mendeley, OBS Studio, Spotify, Steam, Tellico e ZapZap
 **Official repository:** GParted, Firefox Developer Edition, LibreOffice, Lutris e Telegram
+**AUR:** TeamViewer
 
 ## Pacotes desinstalados
 No momento nenhum pacote é desinstalado por este script.
