@@ -24,6 +24,7 @@ flatpak install flathub org.gnome.Boxes -y
 flatpak install flathub com.heroicgameslauncher.hgl -y
 flatpak install flathub net.cozic.joplin_desktop -y
 flatpak install flathub org.kde.kdenlive -y
+flatpak install flathub net.lutris.Lutris -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub com.spotify.Client -y
 flatpak install flathub com.valvesoftware.Steam -y
@@ -47,7 +48,7 @@ wget https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.75.0-x
 
 # Installing Pamac packages
 
-pamac install firefox-developer-edition gparted libreoffice-fresh lutris teamviewer telegram-desktop
+pamac install firefox-developer-edition gparted libreoffice-fresh teamviewer telegram-desktop
 
 # Updating system keys
 
