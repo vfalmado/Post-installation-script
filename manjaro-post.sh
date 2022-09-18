@@ -30,12 +30,14 @@ flatpak install flathub com.spotify.Client -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub org.kde.tellico -y
 flatpak install flathub com.todoist.Todoist -y
+flatpak install flathub org.tuxemon.Tuxemon -y
 flatpak install flathub com.rtosta.zapzap -y
 sudo freshclam
 
 # Downloading PhotoGIMP and Mendeley
 
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
+unzip PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
 mv PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak/.local ~
 mv PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak/.var ~
 wget https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.75.0-x86_64.AppImage
