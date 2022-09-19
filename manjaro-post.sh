@@ -25,8 +25,10 @@ flatpak install flathub com.heroicgameslauncher.hgl -y
 flatpak install flathub net.cozic.joplin_desktop -y
 flatpak install flathub org.kde.kdenlive -y
 flatpak install flathub net.lutris.Lutris -y
+flatpak install flathub ch.theologeek.Manuskript -y
 flatpak install flathub com.obsproject.Studio -y
 flatpak install flathub com.spotify.Client -y
+flatpak install flathub net.scribus.Scribus -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub org.kde.tellico -y
 flatpak install flathub com.todoist.Todoist -y
