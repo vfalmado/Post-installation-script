@@ -18,6 +18,7 @@ flatpak install flathub com.bitwarden.desktop -y
 flatpak install flathub com.gitlab.davem.ClamTk -y
 flatpak install flathub com.discordapp.Discord -y
 flatpak install flathub com.eduke32.EDuke32 -y
+flatpak install flathub org.flameshot.Flameshot -y
 flatpak install flathub org.gimp.GIMP -y
 flatpak install flathub org.gnome.Boxes -y
 # flatpak install flathub io.github.shiftey.Desktop -y
