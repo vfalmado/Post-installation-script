@@ -1,11 +1,16 @@
-# Manjaro-post-script
-Bash script for automating the post-installation process on Manjaro. It was developed for personal use only; feel free to use it if you find it useful.
+# Post-installation script
+
+This is a bash script created to automate the post-installation process on Linux systems that uses apt, dnf, or pacman/pamac. It was designed specifically for Linux Mint, Pop!_OS, Fedora, and Manjaro.
+
+The script identifies which package manager the system uses and applies the appropriate code to the system.
+
+It was developed for personal use only; feel free to use it if you find it useful.
 
 ## Updates
-The script handles the system keys and updates before installing any packages and after the installations are complete.
+The script handles the system keys (Manjaro) and updates before installing any packages and after the installations are complete.
 
 ## Installed packages
-Flatpaks and Snaps are needed for the script to work, which must be previously enabled.
+Flatpaks and Snaps are enabled by this script, without the need to reboot.
 * **Snaps:** Authy and Multipass
 * **Flatpaks:** 0ad, Akregator, Bitwarden, ClamTK, Discord, EDuke32, Flameshot, GIMP, Gnome Boxes, GitHub Desktop, Heroic Games, Joplin, Kdenlive, Lutris, Manuskript, OBS Studio, Scribus, Spotify, Steam, Tellico, Todoist, Tuxemon and ZapZap
 * **Repositories:** bat, btop, duf, exa, fd-find, ncdu and ripgrep
@@ -14,27 +19,16 @@ Flatpaks and Snaps are needed for the script to work, which must be previously e
 * **AppImage:** Mendeley Reference Manager
 
 ## Patches
-PhotoGIMP
+Applies the PhotoGIMP patch
 
 ## Uninstalled packages
 No packages are currently uninstalled.
 
-# Português
-Este é um script de pós-instalação para Manjaro. O mesmo foi desenvolvido para uso pessoal, mas fique à vontade para utilizá-lo se achar útil.
+# Running the script
 
-## Atualizações
-Tanto as atualizações do sistema quando das chaves são realizadas duas vezes, antes de instalar os pacotes e depois que as intalações foram finalizadas.
+In order to run the script on your machine, you can use the following commands on your terminal:
 
-## Pacotes instalados
-Para funcionar corretamente, tanto Flatpaks quanto Snaps devem ser previamente ativados, uma vez que esse procedimento não é realizado pelo script.
-* **Snaps:** Authy e Multipass
-* **Flatpaks:** 0ad, Akregator, Bitwarden, ClamTK, Discord, EDuke32, Flameshot, GIMP, Gnome Boxes, GitHub Desktop, Heroic Games, Joplin, Kdenlive, Lutris, Manuskript, OBS Studio, Scribus, Spotify, Steam, Tellico, Todoist, Tuxemon e ZapZap
-* **Official repository:** GParted, Firefox Developer Edition, LibreOffice e Telegram
-* **AUR:** TeamViewer
-* **AppImage:** Mendeley Reference Manager
-
-## Patches
-PhotoGIMP
-
-## Pacotes desinstalados
-No momento nenhum pacote é desinstalado por este script.
+`git clone https://github.com/vfalmado/Manjaro-post-script`<br>
+`cd Manjaro-post-script`<br>
+`chmod +x post-script.sh`<br>
+`./post-script.sh`
