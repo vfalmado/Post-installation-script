@@ -8,7 +8,8 @@ The script handles the system keys and updates before installing any packages an
 Flatpaks and Snaps are needed for the script to work, which must be previously enabled.
 * **Snaps:** Authy and Multipass
 * **Flatpaks:** 0ad, Akregator, Bitwarden, ClamTK, Discord, EDuke32, Flameshot, GIMP, Gnome Boxes, GitHub Desktop, Heroic Games, Joplin, Kdenlive, Lutris, Manuskript, OBS Studio, Scribus, Spotify, Steam, Tellico, Todoist, Tuxemon and ZapZap
-* **Official repository:** GParted, Firefox Developer Edition, LibreOffice and Telegram
+* **Repositories:** bat, btop, duf, exa, fd-find, ncdu and ripgrep
+* **Official repository (Manjaro):** LibreOffice and Telegram
 * **AUR:** TeamViewer
 * **AppImage:** Mendeley Reference Manager
 
