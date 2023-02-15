@@ -85,17 +85,17 @@ if command -v pacman > /dev/null 2>&1; then
   sudo pacman -Sy archlinux-keyring manjaro-keyring
   sudo pacman-key --populate archlinux manjaro
   sudo pacman-key --refresh-keys
-  pamac install gparted libreoffice-fresh teamviewer btop exa ncdu fd-find duf rg bat
+  pamac install gparted libreoffice-fresh teamviewer btop exa ncdu fd duf ripgrep bat
   sudo pacman -Syu
 
 # Installing dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
-  sudo dnf install btop exa ncdu fd duf rg bat
+  sudo dnf install btop exa ncdu fd-find duf ripgrep bat
   sudo dnf update
   
 elif command -v apt > /dev/null 2>&1; then
-  sudo apt install btop exa ncdu fd duf rg bat
+  sudo apt install btop exa ncdu fd-find duf bat && sudo apt-get install ripgrep
   sudo apt update && sudo apt upgrade -y
 
 echo Pós-instalação finalizada com sucesso!
