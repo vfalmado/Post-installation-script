@@ -66,13 +66,17 @@ flatpak install flathub org.tuxemon.Tuxemon -y
 flatpak install flathub com.rtosta.zapzap -y
 sudo freshclam
 
-# Downloading PhotoGIMP, Syncthing and Mendeley
+# Downloading PhotoGIMP, Syncthing, Bedrock Linux and Mendeley
 
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
 unzip PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
 mv PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak/.local ~
 mv PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak/.var ~
 wget https://github.com/syncthing/syncthing/releases/download/v1.23.1/syncthing-linux-amd64-v1.23.1.tar.gz
+tar -xzf syncthing-linux-amd64-v1.23.1.tar.gz
+wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7.28/bedrock-linux-0.7.28-x86_64.sh
+chmod +x bedrock-linux-0.7.28-x86_64.sh
+sh bedrock-linux-0.7.28-x86_64.sh --hijack
 wget https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.75.0-x86_64.AppImage
 
 # Updating Manjaro/Arch system keys, installing pamac packages, and system updates
