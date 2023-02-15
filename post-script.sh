@@ -20,6 +20,7 @@ fi
 
 # Installing Snap packages
 
+sudo systemctl enable --now snapd.socket
 sudo snap install authy multipass
 
 # Adding flathub and installing flatpak packages
