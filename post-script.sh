@@ -77,7 +77,7 @@ wget https://github.com/syncthing/syncthing/releases/download/v1.23.1/syncthing-
 tar -xzf syncthing-linux-amd64-v1.23.1.tar.gz
 wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7.28/bedrock-linux-0.7.28-x86_64.sh
 chmod +x bedrock-linux-0.7.28-x86_64.sh
-sh bedrock-linux-0.7.28-x86_64.sh --hijack
+sudo sh bedrock-linux-0.7.28-x86_64.sh --hijack
 wget https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.75.0-x86_64.AppImage
 
 # Updating Manjaro/Arch system keys, installing pamac packages, and system updates
