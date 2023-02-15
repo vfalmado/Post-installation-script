@@ -95,8 +95,10 @@ elif command -v dnf > /dev/null 2>&1; then
   sudo dnf install btop exa ncdu fd-find duf ripgrep bat
   sudo dnf update
   
+# Installing apt packages and system updates
+
 elif command -v apt > /dev/null 2>&1; then
   sudo apt install btop exa ncdu fd-find duf bat && sudo apt-get install ripgrep
   sudo apt update && sudo apt upgrade -y
 
-echo Pós-instalação finalizada com sucesso!
+echo "Proccess finished successfully!"
