@@ -28,7 +28,7 @@ No packages are currently uninstalled.
 
 In order to run the script on your machine, you can use the following commands on your terminal:
 
-    git clone https://github.com/vfalmado/Manjaro-post-script
-    cd Manjaro-post-script
+    git clone https://github.com/vfalmado/Post-installation-script
+    cd Post-installation-script
     chmod +x post-script.sh
     ./post-script.sh
