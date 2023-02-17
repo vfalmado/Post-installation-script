@@ -30,6 +30,7 @@ flatpak install flathub com.play0ad.zeroad -y
 flatpak install flathub io.github.Foldex.AdwSteamGtk -y
 flatpak install flathub io.github.prateekmedia.appimagepool -y
 flatpak install flathub com.bitwarden.desktop -y
+flatpak install flathub com.usebottles.bottles -y
 flatpak install flathub com.gitlab.davem.ClamTk -y
 flatpak install flathub org.gnome.DejaDup -y
 flatpak install flathub com.discordapp.Discord -y
