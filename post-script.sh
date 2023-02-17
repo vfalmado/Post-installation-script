@@ -10,7 +10,7 @@ if command -v apt > /dev/null 2>&1; then
 
 elif command -v dnf > /dev/null 2>&1; then
   sudo dnf update -y
-  sudo dnf install snapd
+  sudo dnf install snapd akmod-nvidia
 
 elif command -v pacman > /dev/null 2>&1; then
   sudo pacman -Syu
