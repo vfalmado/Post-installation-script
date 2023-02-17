@@ -18,10 +18,9 @@ elif command -v pacman > /dev/null 2>&1; then
   sudo pacman -S snapd
 fi
 
-# Installing Snap packages
+# Enabling Snaps
 
 sudo systemctl enable --now snapd.socket
-sudo snap install authy multipass
 
 # Adding flathub and installing flatpak packages
 
@@ -34,7 +33,6 @@ flatpak install flathub com.bitwarden.desktop -y
 flatpak install flathub com.gitlab.davem.ClamTk -y
 flatpak install flathub org.gnome.DejaDup -y
 flatpak install flathub com.discordapp.Discord -y
-flatpak install flathub com.eduke32.EDuke32 -y
 flatpak install flathub org.mozilla.firefox -y
 flatpak install flathub org.flameshot.Flameshot -y
 flatpak install flathub com.github.tchx84.Flatseal -y
@@ -55,6 +53,7 @@ flatpak install flathub org.openttd.OpenTTD -y
 flatpak install flathub org.prismlauncher.PrismLauncher -y
 flatpak install flathub org.libretro.RetroArch -y
 flatpak install flathub net.scribus.Scribus -y
+flatpak install flathub dev.alextren.Spot -y
 flatpak install flathub com.spotify.Client -y
 flatpak install flathub com.valvesoftware.Steam -y
 flatpak install flathub com.vscodium.codium -y
@@ -66,6 +65,14 @@ flatpak install flathub com.transmissionbt.Transmission -y
 flatpak install flathub org.tuxemon.Tuxemon -y
 flatpak install flathub com.rtosta.zapzap -y
 sudo freshclam
+
+# Updating flatpaks
+
+flatpak update -y
+
+# Installing Snaps
+
+sudo snap install authy multipass
 
 # Downloading PhotoGIMP, Syncthing, Bedrock Linux and Mendeley
 
@@ -101,4 +108,4 @@ elif command -v apt > /dev/null 2>&1; then
   sudo apt install btop exa ncdu fd-find duf bat && sudo apt-get install ripgrep
   sudo apt update && sudo apt upgrade -y
 
-echo "Proccess finished successfully!"
+echo Proccess finished successfully!
