@@ -1,4 +1,12 @@
 #!/bin/bash
+set -e
+
+# Setting variables
+
+REPS=""
+FLATPAKS=""
+SNAPS="authy multipass"
+
 
 # Identifying the package manager, updating, and enabling snaps
 
@@ -39,7 +47,6 @@ flatpak install flathub org.flameshot.Flameshot -y
 flatpak install flathub com.github.tchx84.Flatseal -y
 flatpak install flathub org.gimp.GIMP -y
 flatpak install flathub org.gnome.Boxes -y
-# flatpak install flathub io.github.shiftey.Desktop -y
 flatpak install flathub org.godotengine.Godot -y
 flatpak install flathub org.hedgewars.Hedgewars -y
 flatpak install flathub com.heroicgameslauncher.hgl -y
@@ -73,7 +80,7 @@ flatpak update -y
 
 # Installing Snaps
 
-sudo snap install authy multipass
+sudo snap install $SNAPS
 
 # Downloading PhotoGIMP, Syncthing, Bedrock Linux and Mendeley
 
