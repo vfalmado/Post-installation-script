@@ -3,8 +3,44 @@ set -e
 
 # Setting variables
 
-REPS=""
-FLATPAKS=""
+REPS="btop exa ncdu duf bat tldr thefuck gparted ripgrep okular"
+FLATPAKS="com.play0ad.zeroad -y
+io.github.Foldex.AdwSteamGtk -y
+io.github.prateekmedia.appimagepool -y
+com.bitwarden.desktop -y
+com.usebottles.bottles -y
+com.gitlab.davem.ClamTk -y
+org.gnome.DejaDup -y
+com.discordapp.Discord -y
+org.mozilla.firefox -y
+org.flameshot.Flameshot -y
+com.github.tchx84.Flatseal -y
+org.gimp.GIMP -y
+org.gnome.Boxes -y
+org.godotengine.Godot -y
+org.hedgewars.Hedgewars -y
+com.heroicgameslauncher.hgl -y
+net.cozic.joplin_desktop -y
+org.kde.kdenlive -y
+io.lmms.LMMS -y
+net.lutris.Lutris -y
+ch.theologeek.Manuskript -y
+org.musescore.MuseScore -y
+com.obsproject.Studio -y
+org.openttd.OpenTTD -y
+org.prismlauncher.PrismLauncher -y
+org.libretro.RetroArch -y
+net.scribus.Scribus -y
+dev.alextren.Spot -y
+com.spotify.Client -y
+com.valvesoftware.Steam -y
+org.telegram.desktop -y
+org.kde.tellico -y
+org.mozilla.Thunderbird -y
+com.todoist.Todoist -y
+com.transmissionbt.Transmission -y
+org.tuxemon.Tuxemon -y
+com.rtosta.zapzap -y"
 SNAPS="authy multipass"
 
 
@@ -18,65 +54,23 @@ if command -v apt > /dev/null 2>&1; then
 
 elif command -v dnf > /dev/null 2>&1; then
   sudo dnf update -y
-  sudo dnf install snapd akmod-nvidia
+  sudo dnf install snapd akmod-nvidia -y
 
 elif command -v pacman > /dev/null 2>&1; then
   sudo pacman -Syu
-  sudo pacman -S flatpak
-  sudo pacman -S snapd
+  sudo pacman -S flatpak snapd
 fi
 
 # Enabling Snaps
 
 sudo systemctl enable --now snapd.socket
 
-# Adding flathub and installing flatpak packages
+# Adding flathub, installing flatpak packages, and updating ClamTK and flatpaks
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-flatpak install flathub com.play0ad.zeroad -y
-flatpak install flathub io.github.Foldex.AdwSteamGtk -y
-flatpak install flathub io.github.prateekmedia.appimagepool -y
-flatpak install flathub com.bitwarden.desktop -y
-flatpak install flathub com.usebottles.bottles -y
-flatpak install flathub com.gitlab.davem.ClamTk -y
-flatpak install flathub org.gnome.DejaDup -y
-flatpak install flathub com.discordapp.Discord -y
-flatpak install flathub org.mozilla.firefox -y
-flatpak install flathub org.flameshot.Flameshot -y
-flatpak install flathub com.github.tchx84.Flatseal -y
-flatpak install flathub org.gimp.GIMP -y
-flatpak install flathub org.gnome.Boxes -y
-flatpak install flathub org.godotengine.Godot -y
-flatpak install flathub org.hedgewars.Hedgewars -y
-flatpak install flathub com.heroicgameslauncher.hgl -y
-flatpak install flathub net.cozic.joplin_desktop -y
-flatpak install flathub org.kde.kdenlive -y
-flatpak install flathub io.lmms.LMMS -y
-flatpak install flathub net.lutris.Lutris -y
-flatpak install flathub ch.theologeek.Manuskript -y
-flatpak install flathub org.musescore.MuseScore -y
-flatpak install flathub com.obsproject.Studio -y
-flatpak install flathub org.openttd.OpenTTD -y
-flatpak install flathub org.prismlauncher.PrismLauncher -y
-flatpak install flathub org.libretro.RetroArch -y
-flatpak install flathub net.scribus.Scribus -y
-flatpak install flathub dev.alextren.Spot -y
-flatpak install flathub com.spotify.Client -y
-flatpak install flathub com.valvesoftware.Steam -y
-flatpak install flathub com.vscodium.codium -y
-flatpak install flathub org.telegram.desktop -y
-flatpak install flathub org.kde.tellico -y
-flatpak install flathub org.mozilla.Thunderbird -y
-flatpak install flathub com.todoist.Todoist -y
-flatpak install flathub com.transmissionbt.Transmission -y
-flatpak install flathub org.tuxemon.Tuxemon -y
-flatpak install flathub com.rtosta.zapzap -y
-sudo freshclam
-
-# Updating flatpaks
-
+flatpak install flathub $FLATPAKS
 flatpak update -y
+sudo freshclam
 
 # Installing Snaps
 
@@ -101,20 +95,20 @@ if command -v pacman > /dev/null 2>&1; then
   sudo pacman -Sy archlinux-keyring manjaro-keyring
   sudo pacman-key --populate archlinux manjaro
   sudo pacman-key --refresh-keys
-  pamac install gparted libreoffice-fresh teamviewer btop exa ncdu fd duf ripgrep bat tldr thefuck
+  pamac install libreoffice-fresh teamviewer fd $REPS
   sudo pacman -Syu
 
 # Installing dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
-  sudo dnf install btop exa ncdu fd-find duf ripgrep bat tldr thefuck
+  sudo dnf install fd-find $REPS
   sudo dnf update
   
 # Installing apt packages and system updates
 
 elif command -v apt > /dev/null 2>&1; then
-  sudo apt install nala && sudo apt-get install ripgrep
-  sudo nala install btop exa ncdu fd-find duf bat tldr thefuck
+  sudo apt install nala
+  sudo nala install fd-find $REPS
   sudo apt update && sudo apt upgrade -y
 
 echo Proccess finished successfully!
