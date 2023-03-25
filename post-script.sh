@@ -100,19 +100,25 @@ if command -v pacman > /dev/null 2>&1; then
   pamac install libreoffice-fresh teamviewer fd $REPS
   sudo pacman -Syu
 
-# Installing Mega, dnf packages and system updates 
+# Installing Mega, TeamViewer, dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
   wget https://mega.nz/linux/repo/Fedora_37/x86_64/megasync-Fedora_37.x86_64.rpm
   sudo dnf install megasync-Fedora_37.x86_64.rpm
+  wget https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
+  sudo dnf install teamviewer.x86_64.rpm
+  rm megasync-Fedora_37.x86_64.rpm teamviewer.x86_64.rpm
   sudo dnf install fd-find $REPS
   sudo dnf update
   
-# Installing Mega, apt packages and system updates
+# Installing Mega, TeamViewer, apt packages and system updates
 
 elif command -v apt > /dev/null 2>&1; then
   wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb
   sudo apt install megasync-xUbuntu_22.04_amd64.deb
+  wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+  sudo apt install teamviewer_amd64.deb
+  rm megasync-xUbuntu_22.04_amd64.deb teamviewer_amd64.deb
   sudo apt install nala
   sudo nala install fd-find $REPS
   sudo apt update && sudo apt upgrade -y
