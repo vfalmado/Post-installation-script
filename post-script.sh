@@ -90,6 +90,7 @@ wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7
 chmod +x bedrock-linux-0.7.28-x86_64.sh
 sudo sh bedrock-linux-0.7.28-x86_64.sh --hijack
 wget https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.75.0-x86_64.AppImage
+rm PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip syncthing-linux-amd64-v1.23.1.tar.gz bedrock-linux-0.7.28-x86_64.sh
 
 # Updating Manjaro/Arch system keys, installing pamac packages, and system updates
 
