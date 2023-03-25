@@ -89,24 +89,30 @@ chmod +x bedrock-linux-0.7.28-x86_64.sh
 sudo sh bedrock-linux-0.7.28-x86_64.sh --hijack
 wget https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.75.0-x86_64.AppImage
 
-# Updating Manjaro/Arch system keys, installing pamac packages, and system updates
+# Updating Manjaro/Arch system keys, installing Mega, pamac packages, and system updates
 
 if command -v pacman > /dev/null 2>&1; then
   sudo pacman -Sy archlinux-keyring manjaro-keyring
   sudo pacman-key --populate archlinux manjaro
   sudo pacman-key --refresh-keys
+  wget https://mega.nz/linux/repo/Arch_Extra/x86_64/megasync-x86_64.pkg.tar.zst
+  sudo pacman -U megasync-x86_64.pkg.tar.zst
   pamac install libreoffice-fresh teamviewer fd $REPS
   sudo pacman -Syu
 
-# Installing dnf packages and system updates 
+# Installing Mega, dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
+  wget https://mega.nz/linux/repo/Fedora_37/x86_64/megasync-Fedora_37.x86_64.rpm
+  sudo dnf install megasync-Fedora_37.x86_64.rpm
   sudo dnf install fd-find $REPS
   sudo dnf update
   
-# Installing apt packages and system updates
+# Installing Mega, apt packages and system updates
 
 elif command -v apt > /dev/null 2>&1; then
+  wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb
+  sudo apt install megasync-xUbuntu_22.04_amd64.deb
   sudo apt install nala
   sudo nala install fd-find $REPS
   sudo apt update && sudo apt upgrade -y
