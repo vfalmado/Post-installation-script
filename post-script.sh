@@ -34,6 +34,7 @@ net.scribus.Scribus -y
 dev.alextren.Spot -y
 com.spotify.Client -y
 com.valvesoftware.Steam -y
+flathub dev.storyapps.starc -y
 org.telegram.desktop -y
 org.kde.tellico -y
 org.mozilla.Thunderbird -y
