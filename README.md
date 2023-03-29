@@ -12,11 +12,13 @@ The script handles the system keys (Manjaro) and updates before installing any p
 ## Installed packages
 Flatpaks and Snaps are enabled by this script, without the need to reboot.
 * **Snaps:** Authy and Multipass
-* **Flatpaks:** 0ad, Akregator, Bitwarden, ClamTK, Discord, EDuke32, Flameshot, GIMP, Gnome Boxes, GitHub Desktop, Heroic Games, Joplin, Kdenlive, Lutris, Manuskript, OBS Studio, Scribus, Spotify, Steam, Tellico, Todoist, Tuxemon and ZapZap
-* **Repositories:** bat, btop, duf, exa, fd-find, ncdu and ripgrep
-* **Official repository (Manjaro):** LibreOffice and Telegram
-* **AUR:** TeamViewer
+* **Flatpaks:** 0ad, AdwSteamGtk, AppImmagePool, Bitwarden, Bottles, ClamTK, DejaDup, Discord, Firefox, Flameshot, Flatseal, GIMP, Gnome Boxes, Godot Engine, HedgeWars, Heroic Games, Joplin, Kdenlive, LMMS, Lutris, Manuskript, MEGAsync, MuseScore, OBS Studio, OpenTTD, PrismLauncher, RetroArch, Scribus, Spot, Spotify, Steam, StoryArchitect (Starc), Telegram, Tellico, Thunderbird, Todoist, Transmission, Tuxemon and ZapZap
+* **Official Repositories:** bat, btop, duf, exa, fd-find, ncdu, ripgrep, tldr, thefuck, gparted, TeamViewer and Okular
+* **DNF:** akmod-nvidia
+* **APT:** nala
+* **PAMAC:** LibreOffice
 * **AppImage:** Mendeley Reference Manager
+* **Others:** Syncthing, Bedrock Linux and NordVPN
 
 ## Patches
 Applies the PhotoGIMP patch
