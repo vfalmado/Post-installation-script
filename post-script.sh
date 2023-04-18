@@ -10,6 +10,7 @@ io.github.prateekmedia.appimagepool -y
 com.bitwarden.desktop -y
 com.usebottles.bottles -y
 com.gitlab.davem.ClamTk -y
+com.github.Eloston.UngoogledChromium -y
 org.gnome.DejaDup -y
 com.discordapp.Discord -y
 org.mozilla.firefox -y
@@ -22,6 +23,7 @@ org.hedgewars.Hedgewars -y
 com.heroicgameslauncher.hgl -y
 net.cozic.joplin_desktop -y
 org.kde.kdenlive -y
+info.febvre.Komikku -y
 io.lmms.LMMS -y
 net.lutris.Lutris -y
 ch.theologeek.Manuskript -y
@@ -48,16 +50,19 @@ SNAPS="authy multipass"
 
 # Identifying the package manager, updating, and enabling snaps
 
+# APT
 if command -v apt > /dev/null 2>&1; then
   sudo apt update && sudo apt upgrade -y
   sudo rm /etc/apt/preferences.d/nosnap.pref
   sudo apt update
   sudo apt install snapd -y
 
+# DNF
 elif command -v dnf > /dev/null 2>&1; then
   sudo dnf update -y
   sudo dnf install snapd akmod-nvidia -y
-
+  
+# PACMAN
 elif command -v pacman > /dev/null 2>&1; then
   sudo pacman -Syu
   sudo pacman -S flatpak snapd
@@ -80,6 +85,7 @@ sudo snap install $SNAPS
 
 # Downloading PhotoGIMP, Syncthing, Bedrock Linux, Mendeley and NordVPN
 
+curl -s https://raw.githubusercontent.com/projetus-ti/facilitador-linux/master/install.sh | sudo bash
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
 unzip PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
 mv PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak/.local ~
@@ -106,9 +112,9 @@ if command -v pacman > /dev/null 2>&1; then
 # Installing TeamViewer, dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
-  wget https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm
-  sudo dnf install teamviewer.x86_64.rpm
-  rm teamviewer.x86_64.rpm
+  wget https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm https://mega.nz/linux/repo/Fedora_37/x86_64/megasync-Fedora_37.x86_64.rpm
+  sudo dnf install teamviewer.x86_64.rpm megasync-Fedora_37.x86_64.rpm
+  rm teamviewer.x86_64.rpm megasync-Fedora_37.x86_64.rpm
   sudo dnf install fd-find $REPS
   sudo dnf update
   
