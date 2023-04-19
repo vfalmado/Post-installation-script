@@ -17,6 +17,7 @@ org.mozilla.firefox -y
 org.flameshot.Flameshot -y
 com.github.tchx84.Flatseal -y
 org.gimp.GIMP -y
+org.gnome.Extensions -y
 org.gnome.Boxes -y
 org.godotengine.Godot -y
 org.hedgewars.Hedgewars -y
@@ -115,7 +116,7 @@ elif command -v dnf > /dev/null 2>&1; then
   wget https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm https://mega.nz/linux/repo/Fedora_37/x86_64/megasync-Fedora_37.x86_64.rpm
   sudo dnf install teamviewer.x86_64.rpm megasync-Fedora_37.x86_64.rpm
   rm teamviewer.x86_64.rpm megasync-Fedora_37.x86_64.rpm
-  sudo dnf install fd-find $REPS
+  sudo dnf install fd-find gnome-tweaks $REPS
   sudo dnf update
   
 # Installing TeamViewer, apt packages and system updates
