@@ -3,7 +3,7 @@ set -e
 
 # Setting variables
 
-REPS="btop exa ncdu duf bat tldr thefuck gparted ripgrep"
+REPS="bat btop duf exa gnome-tweaks gparted ncdu ripgrep tldr thefuck"
 FLATPAKS="io.github.Foldex.AdwSteamGtk
 org.audacityteam.Audacity
 com.bitwarden.desktop
