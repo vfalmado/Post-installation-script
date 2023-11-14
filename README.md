@@ -4,24 +4,20 @@ This is a bash script created to automate the post-installation process on Linux
 
 The script identifies which package manager the system uses and applies the appropriate code to the system.
 
-It was developed for personal use only; feel free to use it if you find it useful.
+It was developed for personal use only; feel free to use or modify it if you find it useful.
 
 ## Updates
 The script handles the system keys (Manjaro) and updates before installing any packages and after the installations are complete.
 
 ## Installed packages
-Flatpaks and Snaps are enabled by this script, without the need to reboot.
-* **Snaps:** Authy and Multipass
-* **Flatpaks:** 0ad, AdwSteamGtk, AppImmagePool, Bitwarden, Bottles, ClamTK, DejaDup, Discord, Firefox, Flameshot, Flatseal, GIMP, Gnome Boxes, Godot Engine, HedgeWars, Heroic Games, Joplin, Kdenlive, LMMS, Lutris, Manuskript, MEGAsync, MuseScore, OBS Studio, OpenTTD, PrismLauncher, RetroArch, Scribus, Spot, Spotify, Steam, StoryArchitect (Starc), Telegram, Tellico, Thunderbird, Todoist, Transmission, Tuxemon and ZapZap
-* **Official Repositories:** bat, btop, duf, exa, fd-find, ncdu, ripgrep, tldr, thefuck, gparted, TeamViewer and Okular
+Flatpaks are enabled by this script, without the need to reboot; snaps are no longer used.
+* **Flatpaks:** AdwSteamGtk, Audacity, Bitwarden, Blanket, Bottles, Boxes, Cartridges, ClamTK, Cockpit Client, DejaDup, Detwinner, Discord, Firefox, Flatseal, Fluffychat, Freeplane, Fsearch, Gearlever, GIMP, Gnome Extensions, Guitarix, Heroic Games Launcher, Hidamari, Inkscape, Kdenlive, Komikku, LMMS, Lutris, MEGAsync, Motrix, Obsidian, OBS Studio, Okular, OpenAndroidInstaller, OpenTTD, Organizer, RetroArch, Spotify, Steam, Telegram, Tellico, Thunderbird, Todoist, Transmission, Tuxemon, TuxGuitar, VLC and ZapZap
+* **Official Repositories:** bat, btop, duf, exa, fd-find, gparted, ncdu, ripgrep, tldr and thefuck
 * **DNF:** akmod-nvidia
 * **APT:** nala
 * **PAMAC:** LibreOffice
-* **AppImage:** Mendeley Reference Manager
-* **Others:** Syncthing, Bedrock Linux and NordVPN
-
-## Patches
-Applies the PhotoGIMP patch
+* **AppImage:** Fedistar and Mendeley Reference Manager
+* **Others:** Bedrock Linux, Facilitador Linux, NordVPN, PhotoGIMP patch, Syncthing and TeamViewer
 
 ## Uninstalled packages
 No packages are currently uninstalled.
