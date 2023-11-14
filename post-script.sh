@@ -5,29 +5,40 @@ set -e
 
 REPS="btop exa ncdu duf bat tldr thefuck gparted ripgrep"
 FLATPAKS="io.github.Foldex.AdwSteamGtk
+org.audacityteam.Audacity
 com.bitwarden.desktop
+com.rafaelmardojai.Blanket
 com.usebottles.bottles
 org.gnome.Boxes
 hu.kramo.Cartridges
 com.gitlab.davem.ClamTk
+org.cockpit_project.CockpitClient
 org.gnome.DejaDup
+com.neatdecisions.Detwinner
 com.discordapp.Discord
 org.mozilla.firefox
 com.github.tchx84.Flatseal
 im.fluffychat.Fluffychat
+org.freeplane.App
+io.github.cboxdoerfer.FSearch
 it.mijorus.gearlever
 org.gimp.GIMP
 org.gnome.Extensions
+org.guitarix.Guitarix
 com.heroicgameslauncher.hgl
+io.github.jeffshee.Hidamari
 org.inkscape.Inkscape
 org.kde.kdenlive
 info.febvre.Komikku
 io.lmms.LMMS
 net.lutris.Lutris
 nz.mega.MEGAsync
+net.agalwood.Motrix
 md.obsidian.Obsidian
 com.obsproject.Studio
 org.kde.okular
+org.openandroidinstaller.OpenAndroidInstaller
+org.librehunt.Organizer
 org.libretro.RetroArch
 com.spotify.Client
 com.valvesoftware.Steam
@@ -37,6 +48,7 @@ org.mozilla.Thunderbird
 com.todoist.Todoist
 com.transmissionbt.Transmission
 org.tuxemon.Tuxemon
+ar.com.tuxguitar.TuxGuitar
 org.videolan.VLC
 com.rtosta.zapzap"
 
