@@ -38,6 +38,7 @@ md.obsidian.Obsidian
 com.obsproject.Studio
 org.kde.okular
 org.openandroidinstaller.OpenAndroidInstaller
+org.openttd.OpenTTD
 org.librehunt.Organizer
 org.libretro.RetroArch
 com.spotify.Client
