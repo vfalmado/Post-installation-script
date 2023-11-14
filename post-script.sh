@@ -8,19 +8,24 @@ FLATPAKS="io.github.Foldex.AdwSteamGtk
 com.bitwarden.desktop
 com.usebottles.bottles
 org.gnome.Boxes
+hu.kramo.Cartridges
 com.gitlab.davem.ClamTk
 org.gnome.DejaDup
 com.discordapp.Discord
 org.mozilla.firefox
 com.github.tchx84.Flatseal
+im.fluffychat.Fluffychat
+it.mijorus.gearlever
 org.gimp.GIMP
 org.gnome.Extensions
 com.heroicgameslauncher.hgl
+org.inkscape.Inkscape
 org.kde.kdenlive
 info.febvre.Komikku
 io.lmms.LMMS
 net.lutris.Lutris
 nz.mega.MEGAsync
+md.obsidian.Obsidian
 com.obsproject.Studio
 org.kde.okular
 org.libretro.RetroArch
@@ -32,6 +37,7 @@ org.mozilla.Thunderbird
 com.todoist.Todoist
 com.transmissionbt.Transmission
 org.tuxemon.Tuxemon
+org.videolan.VLC
 com.rtosta.zapzap"
 
 # Identifying the package manager, updating, and enabling snaps
@@ -59,13 +65,14 @@ flatpak install flathub $FLATPAKS
 flatpak update -y
 sudo freshclam
 
-# Downloading PhotoGIMP, Syncthing, Bedrock Linux, Mendeley and NordVPN
+# Downloading PhotoGIMP, Fedistar, Syncthing, Bedrock Linux, Mendeley and NordVPN
 
 curl -s https://raw.githubusercontent.com/projetus-ti/facilitador-linux/master/install.sh | sudo bash
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
 unzip PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
 mv PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak/.local ~
 mv PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak/.var ~
+wget https://github.com/h3poteto/fedistar/releases/download/v1.7.3/fedistar_1.7.3_amd64.AppImage
 wget https://github.com/syncthing/syncthing/releases/download/v1.26.0/syncthing-linux-amd64-v1.26.0.tar.gz
 tar -xzf syncthing-linux-amd64-v1.26.0.tar.gz
 wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7.28/bedrock-linux-0.7.28-x86_64.sh
