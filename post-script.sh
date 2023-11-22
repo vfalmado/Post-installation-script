@@ -78,7 +78,7 @@ flatpak install flathub $FLATPAKS
 flatpak update -y
 sudo freshclam
 
-# Downloading PhotoGIMP, Fedistar, Syncthing, Bedrock Linux, Mendeley and NordVPN
+# Downloading PhotoGIMP, Fedistar, Syncthing, Universal Android Debloater, Bedrock Linux, Mendeley and NordVPN
 
 curl -s https://raw.githubusercontent.com/projetus-ti/facilitador-linux/master/install.sh | sudo bash
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip
@@ -88,11 +88,13 @@ mv PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak/.var ~
 wget https://github.com/h3poteto/fedistar/releases/download/v1.7.3/fedistar_1.7.3_amd64.AppImage
 wget https://github.com/syncthing/syncthing/releases/download/v1.26.0/syncthing-linux-amd64-v1.26.0.tar.gz
 tar -xzf syncthing-linux-amd64-v1.26.0.tar.gz
+wget https://github.com/0x192/universal-android-debloater/releases/download/0.5.1/uad_gui-linux.tar.gz
+tar -xzf uad_gui-linux.tar.gz
 wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7.28/bedrock-linux-0.7.28-x86_64.sh
 chmod +x bedrock-linux-0.7.28-x86_64.sh
 sudo sh bedrock-linux-0.7.28-x86_64.sh --hijack
 wget https://static.mendeley.com/bin/desktop/mendeley-reference-manager-2.103.0-x86_64.AppImage
-rm PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip syncthing-linux-amd64-v1.26.0.tar.gz bedrock-linux-0.7.28-x86_64.sh
+rm PhotoGIMP.by.Diolinux.v2020.1.for.Flatpak.zip syncthing-linux-amd64-v1.26.0.tar.gz bedrock-linux-0.7.28-x86_64.sh uad_gui-linux.tar.gz
 sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
 nordvpn login
 
