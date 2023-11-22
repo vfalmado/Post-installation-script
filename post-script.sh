@@ -3,7 +3,7 @@ set -e
 
 # Setting variables
 
-REPS="bat btop duf exa gnome-tweaks gparted ncdu ripgrep tldr thefuck"
+REPS="adb bat btop duf exa gnome-tweaks gparted ncdu ripgrep tldr thefuck"
 FLATPAKS="io.github.Foldex.AdwSteamGtk
 org.audacityteam.Audacity
 com.bitwarden.desktop
@@ -123,5 +123,6 @@ elif command -v apt > /dev/null 2>&1; then
   sudo apt install nala
   sudo nala install fd-find $REPS
   sudo apt update && sudo apt upgrade -y
+fi
 
-echo Proccess finished successfully!
+echo "Proccess finished successfully!"
