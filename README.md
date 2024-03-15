@@ -11,7 +11,7 @@ The script handles the system keys (Manjaro) and updates before installing any p
 
 ## Installed packages
 Flatpaks are enabled by this script, without the need to reboot; snaps are no longer used.
-* **Flatpaks:** AdwSteamGtk, AnyDesk, Ardour, Audacity, Bitwarden, Blanket, BleachBit, Bottles, Boxes, Cartridges, ClamTK, Cockpit Client, Darktable, Detwinner, Discord, Firefox, Flatseal, Fluffychat, Freeplane, Fsearch, Gearlever, GIMP, Gnome Extensions, Guitarix, Heroic Games Launcher, Hidamari, Inkscape, Kdenlive, Komikku, LMMS, Lutris, MEGAsync, Motrix, Obsidian, OBS Studio, Okular, OnlyOffice, OpenAndroidInstaller, OpenTTD, Organizer, RetroArch, Spotify, Steam, Telegram, Tellico, Thunderbird, Todoist, Transmission, Tuxemon, TuxGuitar, VLC and ZapZap
+* **Flatpaks:** AdwSteamGtk, AnyDesk, Ardour, Audacity, Bitwarden, Blanket, BleachBit, Bottles, Boxes, Cartridges, ClamTK, Cockpit Client, Darktable, Detwinner, Discord, Firefox, Flatseal, Fluffychat, Freeplane, Fsearch, Gearlever, GIMP, Gnome Extensions, Guitarix, Heroic Games Launcher, Hidamari, Inkscape, Kdenlive, Komikku, LMMS, Lutris, MEGAsync, Motrix, OBS Studio, Okular, OnlyOffice, OpenAndroidInstaller, OpenTTD, Organizer, RetroArch, Spotify, Steam, Telegram, Tellico, Thunderbird, Todoist, Transmission, Tuxemon, TuxGuitar, VLC and ZapZap
 * **Official Repositories:** adb, bat, btop, duf, exa, fd-find, gnome-tweaks, gparted, ncdu, ripgrep, timseshift, tldr and thefuck
 * **DNF:** akmod-nvidia
 * **APT:** nala
