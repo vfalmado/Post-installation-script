@@ -3,17 +3,20 @@ set -e
 
 # Setting variables
 
-REPS="adb bat btop duf exa gnome-tweaks gparted ncdu ripgrep tldr thefuck"
+REPS="adb bat btop duf exa gnome-tweaks gparted ncdu ripgrep timeshift tldr thefuck"
 FLATPAKS="io.github.Foldex.AdwSteamGtk
+flathub com.anydesk.Anydesk
+flathub org.ardour.Ardour
 org.audacityteam.Audacity
 com.bitwarden.desktop
 com.rafaelmardojai.Blanket
+org.bleachbit.BleachBit
 com.usebottles.bottles
 org.gnome.Boxes
 hu.kramo.Cartridges
 com.gitlab.davem.ClamTk
 org.cockpit_project.CockpitClient
-org.gnome.DejaDup
+org.darktable.Darktable
 com.neatdecisions.Detwinner
 com.discordapp.Discord
 org.mozilla.firefox
@@ -34,9 +37,9 @@ io.lmms.LMMS
 net.lutris.Lutris
 nz.mega.MEGAsync
 net.agalwood.Motrix
-md.obsidian.Obsidian
 com.obsproject.Studio
 org.kde.okular
+org.onlyoffice.desktopeditors
 org.openandroidinstaller.OpenAndroidInstaller
 org.openttd.OpenTTD
 org.librehunt.Organizer
