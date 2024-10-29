@@ -11,13 +11,13 @@ The script handles the system keys (Manjaro) and updates before installing any p
 
 ## Installed packages
 Flatpaks are enabled by this script, without the need to reboot; snaps are no longer used.
-* **Flatpaks:** AdwSteamGtk, AnyDesk, Ardour, Audacity, Bitwarden, Blanket, BleachBit, Bottles, Boxes, Cartridges, ClamTK, Cockpit Client, Darktable, Detwinner, Discord, Firefox, Flatseal, Fluffychat, Freeplane, Fsearch, Gearlever, GIMP, Gnome Extensions, Guitarix, Heroic Games Launcher, Hidamari, Inkscape, Kdenlive, Komikku, LMMS, Lutris, MEGAsync, Motrix, OBS Studio, Okular, OnlyOffice, OpenAndroidInstaller, OpenTTD, Organizer, RetroArch, Spotify, Steam, Telegram, Tellico, Thunderbird, Todoist, Transmission, Tuxemon, TuxGuitar, VLC and ZapZap
+* **Flatpaks:** AdwSteamGtk, Anki, AnyDesk, Ardour, Audacity, Bitwarden, BleachBit, Bottles, Boxes, Carla, ClamTK, Cockpit Client, Darktable, Detwinner, Discord, Firefox, Flameshot, Flatseal, Fsearch, Gearlever, GIMP, Guitarix, Heroic Games Launcher, Hydrogen, Inkscape, Kdenlive, Komikku, Lutris, Minetest, Motrix, OBS Studio, Okular, OnlyOffice, OpenAndroidInstaller, OpenTTD, Organizer, RetroArch, Spotify, Steam, Telegram, Tellico, Thunderbird, Todoist, Transmission, TuxGuitar, VLC and ZapZap
 * **Official Repositories:** adb, bat, btop, duf, exa, fd-find, gnome-tweaks, gparted, ncdu, ripgrep, timseshift, tldr and thefuck
-* **DNF:** akmod-nvidia
+* **DNF:** akmod-nvidia, glibc-devel, cairo-devel, libX11-devel, xorg-x11-proto-devel and lv2-devel
 * **APT:** nala
 * **PAMAC:** LibreOffice
-* **AppImage:** Fedistar and Mendeley Reference Manager
-* **Others:** Bedrock Linux, Facilitador Linux, NordVPN, PhotoGIMP patch, Syncthing, TeamViewer and Universal Android Debloater
+* **AppImage:** Moises
+* **Others:** Bedrock Linux, MegaSync, NordVPN, PhotoGIMP patch, TeamViewer and Universal Android Debloater
 
 ## Uninstalled packages
 No packages are currently uninstalled.
