@@ -27,6 +27,7 @@ it.mijorus.gearlever
 org.gimp.GIMP
 org.guitarix.Guitarix
 com.heroicgameslauncher.hgl
+org.hydrogenmusic.Hydrogen
 org.inkscape.Inkscape
 org.kde.kdenlive
 info.febvre.Komikku
