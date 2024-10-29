@@ -77,8 +77,9 @@ flatpak install flathub $FLATPAKS
 flatpak update -y
 sudo freshclam
 
-# Downloading PhotoGIMP, Universal Android Debloater, Bedrock Linux and NordVPN
+# Downloading Moises, PhotoGIMP, Universal Android Debloater, Bedrock Linux and NordVPN
 
+wget https://desktop.moises.ai/
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.zip
 unzip PhotoGIMP.zip
 mv PhotoGIMP-master/.local ~
