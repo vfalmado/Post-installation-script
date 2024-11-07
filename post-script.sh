@@ -98,6 +98,8 @@ if command -v pacman > /dev/null 2>&1; then
   sudo pacman-key --populate archlinux manjaro
   sudo pacman-key --refresh-keys
   pamac install libreoffice-fresh teamviewer fd $REPS
+  sudo systemctl enable --now snapd.socket
+  sudo snap install nordvpn
   sudo pacman -Syu
 
 # Installing TeamViewer, MegaSync, NordVPN Snap, dnf packages and system updates 
@@ -107,6 +109,7 @@ elif command -v dnf > /dev/null 2>&1; then
   sudo dnf install teamviewer.x86_64.rpm megasync-Fedora_40.x86_64.rpm
   rm teamviewer.x86_64.rpm megasync-Fedora_40.x86_64.rpm
   sudo dnf install fd-find glibc-devel cairo-devel libX11-devel xorg-x11-proto-devel lv2-devel $REPS
+  sudo systemctl enable --now snapd.socket
   sudo snap install nordvpn
   sudo dnf update
   
@@ -118,6 +121,8 @@ elif command -v apt > /dev/null 2>&1; then
   rm teamviewer_amd64.deb
   sudo apt install nala
   sudo nala install fd-find $REPS
+  sudo systemctl enable --now snapd.socket
+  sudo snap install nordvpn
   sudo apt update && sudo apt upgrade -y
 fi
 
