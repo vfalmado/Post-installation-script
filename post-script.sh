@@ -3,7 +3,7 @@ set -e
 
 # Setting variables
 
-REPS="adb bat btop duf exa gparted ncdu ripgrep timeshift tldr thefuck"
+REPS="adb bat btop duf exa gparted ncdu ripgrep timeshift tldr thefuck snapd"
 FLATPAKS="io.github.Foldex.AdwSteamGtk
 net.ankiweb.Anki
 com.anydesk.Anydesk
@@ -77,7 +77,7 @@ flatpak install flathub $FLATPAKS
 flatpak update -y
 sudo freshclam
 
-# Downloading Moises, PhotoGIMP, Universal Android Debloater, Bedrock Linux and NordVPN
+# Downloading Moises, PhotoGIMP, Universal Android Debloater and Bedrock Linux
 
 wget https://desktop.moises.ai/
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.zip
@@ -90,8 +90,6 @@ wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7
 chmod +x bedrock-linux-0.7.30-x86_64.sh
 sudo sh bedrock-linux-0.7.30-x86_64.sh --hijack
 rm PhotoGIMP-master bedrock-linux-0.7.30-x86_64.sh uad_gui-linux.tar.gz
-sh <(curl -sSf https://downloads.nordcdn.com/apps/linux/install.sh)
-nordvpn login
 
 # Updating Manjaro/Arch system keys, installing pamac packages, and system updates
 
@@ -102,13 +100,14 @@ if command -v pacman > /dev/null 2>&1; then
   pamac install libreoffice-fresh teamviewer fd $REPS
   sudo pacman -Syu
 
-# Installing TeamViewer, MegaSync, dnf packages and system updates 
+# Installing TeamViewer, MegaSync, NordVPN Snap, dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
   wget https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm https://mega.nz/linux/repo/Fedora_40/x86_64/megasync-Fedora_40.x86_64.rpm
   sudo dnf install teamviewer.x86_64.rpm megasync-Fedora_40.x86_64.rpm
   rm teamviewer.x86_64.rpm megasync-Fedora_40.x86_64.rpm
   sudo dnf install fd-find glibc-devel cairo-devel libX11-devel xorg-x11-proto-devel lv2-devel $REPS
+  sudo snap install nordvpn
   sudo dnf update
   
 # Installing TeamViewer, apt packages and system updates
