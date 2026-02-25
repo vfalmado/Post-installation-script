@@ -18,6 +18,7 @@ com.neatdecisions.Detwinner
 com.discordapp.Discord
 org.flameshot.Flameshot
 com.github.tchx84.Flatseal
+org.freeplane.App
 io.github.cboxdoerfer.FSearch
 it.mijorus.gearlever
 org.gimp.GIMP
