@@ -4,8 +4,7 @@ set -e
 # Setting variables
 
 REPS="adb bat btop duf exa gparted ncdu ripgrep timeshift tldr thefuck snapd"
-FLATPAKS="io.github.Foldex.AdwSteamGtk
-net.ankiweb.Anki
+FLATPAKS="net.ankiweb.Anki
 com.anydesk.Anydesk
 org.ardour.Ardour
 org.audacityteam.Audacity
@@ -15,11 +14,8 @@ com.usebottles.bottles
 org.gnome.Boxes
 studio.kx.carla
 com.gitlab.davem.ClamTk
-org.cockpit_project.CockpitClient
-org.darktable.Darktable
 com.neatdecisions.Detwinner
 com.discordapp.Discord
-org.mozilla.firefox
 org.flameshot.Flameshot
 com.github.tchx84.Flatseal
 io.github.cboxdoerfer.FSearch
@@ -30,9 +26,9 @@ com.heroicgameslauncher.hgl
 org.hydrogenmusic.Hydrogen
 org.inkscape.Inkscape
 org.kde.kdenlive
-info.febvre.Komikku
+io.gitlab.librewolf-community
+org.luanti.luanti
 net.lutris.Lutris
-net.minetest.Minetest
 net.agalwood.Motrix
 com.obsproject.Studio
 org.kde.okular
@@ -42,11 +38,11 @@ org.openttd.OpenTTD
 org.librehunt.Organizer
 org.libretro.RetroArch
 com.spotify.Client
+io.github.mfat.sshpilot
 com.valvesoftware.Steam
 org.telegram.desktop
 org.kde.tellico
 org.mozilla.Thunderbird
-com.todoist.Todoist
 com.transmissionbt.Transmission
 ar.com.tuxguitar.TuxGuitar
 org.videolan.VLC
@@ -62,7 +58,7 @@ if command -v apt > /dev/null 2>&1; then
 # DNF, also installs Nvidia drivers
 elif command -v dnf > /dev/null 2>&1; then
   sudo dnf update -y
-  sudo dnf install akmod-nvidia -y
+  #sudo dnf install akmod-nvidia -y
   
 # PACMAN
 elif command -v pacman > /dev/null 2>&1; then
@@ -72,12 +68,11 @@ fi
 
 # Adding flathub, installing flatpak packages, and updating ClamTK and flatpaks
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub $FLATPAKS
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y
+flatpak install flathub $FLATPAKS -y
 flatpak update -y
-sudo freshclam
 
-# Downloading Moises, PhotoGIMP, Universal Android Debloater and Bedrock Linux
+# Downloading Moises, PhotoGIMP, Universal Android Debloater and LinuxToys
 
 wget https://desktop.moises.ai/
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.zip
@@ -86,10 +81,8 @@ mv PhotoGIMP-master/.local ~
 mv PhotoGIMP-master/.var ~
 wget https://github.com/0x192/universal-android-debloater/releases/download/0.5.1/uad_gui-linux.tar.gz
 tar -xzf uad_gui-linux.tar.gz
-wget https://github.com/bedrocklinux/bedrocklinux-userland/releases/download/0.7.30/bedrock-linux-0.7.30-x86_64.sh
-chmod +x bedrock-linux-0.7.30-x86_64.sh
-sudo sh bedrock-linux-0.7.30-x86_64.sh --hijack
-rm PhotoGIMP-master bedrock-linux-0.7.30-x86_64.sh uad_gui-linux.tar.gz
+curl -fsSL https://linux.toys/install.sh | bash
+rm PhotoGIMP-master uad_gui-linux.tar.gz
 
 # Updating Manjaro/Arch system keys, installing pamac packages, and system updates
 
@@ -98,31 +91,22 @@ if command -v pacman > /dev/null 2>&1; then
   sudo pacman-key --populate archlinux manjaro
   sudo pacman-key --refresh-keys
   pamac install libreoffice-fresh teamviewer fd $REPS
-  sudo systemctl enable --now snapd.socket
-  sudo snap install nordvpn
   sudo pacman -Syu
 
 # Installing TeamViewer, MegaSync, NordVPN Snap, dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
-  wget https://download.teamviewer.com/download/linux/teamviewer.x86_64.rpm https://mega.nz/linux/repo/Fedora_40/x86_64/megasync-Fedora_40.x86_64.rpm
-  sudo dnf install teamviewer.x86_64.rpm megasync-Fedora_40.x86_64.rpm
-  rm teamviewer.x86_64.rpm megasync-Fedora_40.x86_64.rpm
-  sudo dnf install fd-find glibc-devel cairo-devel libX11-devel xorg-x11-proto-devel lv2-devel $REPS
-  sudo systemctl enable --now snapd.socket
-  sudo snap install nordvpn
-  sudo dnf update
+  wget https://mega.nz/linux/repo/Fedora_43/x86_64/megasync-Fedora_43.x86_64.rpm
+  sudo dnf install "$PWD/megasync-Fedora_43.x86_64.rpm" -y
+  rm megasync-Fedora_43.x86_64.rpm
+  sudo dnf install fd-find glibc-devel cairo-devel libX11-devel xorg-x11-proto-devel lv2-devel $REPS -y
+  sudo dnf update -y
   
 # Installing TeamViewer, apt packages and system updates
 
 elif command -v apt > /dev/null 2>&1; then
-  wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
-  sudo apt install teamviewer_amd64.deb
-  rm teamviewer_amd64.deb
-  sudo apt install nala
-  sudo nala install fd-find $REPS
-  sudo systemctl enable --now snapd.socket
-  sudo snap install nordvpn
+  sudo apt install nala -y
+  sudo nala install fd-find $REPS -y
   sudo apt update && sudo apt upgrade -y
 fi
 
