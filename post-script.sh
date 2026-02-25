@@ -24,12 +24,14 @@ org.gimp.GIMP
 org.guitarix.Guitarix
 com.heroicgameslauncher.hgl
 org.hydrogenmusic.Hydrogen
+org.raspberrypi.rpi-imager
 org.inkscape.Inkscape
 org.kde.kdenlive
 io.gitlab.librewolf-community
 org.luanti.luanti
 net.lutris.Lutris
 net.agalwood.Motrix
+com.nextcloud.desktopclient.nextcloud
 com.obsproject.Studio
 org.kde.okular
 org.onlyoffice.desktopeditors
@@ -46,7 +48,8 @@ org.mozilla.Thunderbird
 com.transmissionbt.Transmission
 ar.com.tuxguitar.TuxGuitar
 org.videolan.VLC
-com.rtosta.zapzap"
+com.rtosta.zapzap
+org.zotero.Zotero"
 
 # Identifying the package manager and updating
 
