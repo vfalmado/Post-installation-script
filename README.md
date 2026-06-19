@@ -11,14 +11,12 @@ The script handles the system keys (Manjaro) and updates before installing any p
 
 ## Installed packages
 Flatpaks and Snaps are enabled by this script, without the need to reboot.
-* **Flatpaks:** AdwSteamGtk, Anki, AnyDesk, Ardour, Audacity, Bitwarden, BleachBit, Bottles, Boxes, Carla, ClamTK, Cockpit Client, Darktable, Detwinner, Discord, Firefox, Flameshot, Flatseal, Fsearch, Gearlever, GIMP, Guitarix, Heroic Games Launcher, Hydrogen, Inkscape, Kdenlive, Komikku, Lutris, Minetest, Motrix, OBS Studio, Okular, OnlyOffice, OpenAndroidInstaller, OpenTTD, Organizer, RetroArch, Spotify, Steam, Telegram, Tellico, Thunderbird, Todoist, Transmission, TuxGuitar, VLC and ZapZap
+* **Flatpaks:** AnyDesk, Ardour, Bitwarden, Bottles, Boxes, Carla, ClamUI, Detwinner, Discord, Flameshot, Flatseal, Freeplane, Fsearch, Gearlever, GIMP, Guitarix, Heroic Games Launcher, Hydrogen, Imager (Rpi), Inkscape, Kdenlive, LibreWolf, Luanti, Lutris, Motrix, Nextcloud Client, OBS Studio, Okular, OnlyOffice, OpenAndroidInstaller, OpenTTD, Organizer, RetroArch, Spotify, SSHPilot, Steam, Telegram, Tellico, Thunderbird, Transmission, TuxGuitar, VLC, ZapZap and Zotero.
 * **Official Repositories:** adb, bat, btop, duf, exa, fd-find, gnome-tweaks, gparted, ncdu, ripgrep, timseshift, tldr and thefuck
 * **DNF:** akmod-nvidia, glibc-devel, cairo-devel, libX11-devel, xorg-x11-proto-devel and lv2-devel
 * **APT:** nala
 * **PAMAC:** LibreOffice
-* **AppImage:** Moises
-* **Snap:** NordVPN
-* **Others:** Bedrock Linux, MegaSync, NordVPN, PhotoGIMP patch, TeamViewer and Universal Android Debloater
+* **Others:** PhotoGIMP patch, Universal Android Debloater, and LinuxToys
 
 ## Uninstalled packages
 No packages are currently uninstalled.
