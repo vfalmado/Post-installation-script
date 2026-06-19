@@ -3,17 +3,14 @@ set -e
 
 # Setting variables
 
-REPS="adb bat btop duf exa gparted ncdu ripgrep timeshift tldr thefuck snapd"
-FLATPAKS="net.ankiweb.Anki
-com.anydesk.Anydesk
+REPS="adb bat btop duf exa gparted ncdu ripgrep timeshift tldr thefuck"
+FLATPAKS="com.anydesk.Anydesk
 org.ardour.Ardour
-org.audacityteam.Audacity
 com.bitwarden.desktop
-org.bleachbit.BleachBit
 com.usebottles.bottles
 org.gnome.Boxes
 studio.kx.carla
-com.gitlab.davem.ClamTk
+io.github.linx_systems.ClamUI
 com.neatdecisions.Detwinner
 com.discordapp.Discord
 org.flameshot.Flameshot
@@ -70,15 +67,14 @@ elif command -v pacman > /dev/null 2>&1; then
   sudo pacman -S flatpak
 fi
 
-# Adding flathub, installing flatpak packages, and updating ClamTK and flatpaks
+# Adding flathub, installing flatpak packages, and updating flatpaks
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y
 flatpak install flathub $FLATPAKS -y
 flatpak update -y
 
-# Downloading Moises, PhotoGIMP, Universal Android Debloater and LinuxToys
+# Downloading PhotoGIMP, Universal Android Debloater and LinuxToys
 
-wget https://desktop.moises.ai/
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.zip
 unzip PhotoGIMP.zip
 mv PhotoGIMP-master/.local ~
@@ -97,16 +93,13 @@ if command -v pacman > /dev/null 2>&1; then
   pamac install libreoffice-fresh teamviewer fd $REPS
   sudo pacman -Syu
 
-# Installing TeamViewer, MegaSync, NordVPN Snap, dnf packages and system updates 
+# Installing dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
-  wget https://mega.nz/linux/repo/Fedora_43/x86_64/megasync-Fedora_43.x86_64.rpm
-  sudo dnf install "$PWD/megasync-Fedora_43.x86_64.rpm" -y
-  rm megasync-Fedora_43.x86_64.rpm
   sudo dnf install fd-find glibc-devel cairo-devel libX11-devel xorg-x11-proto-devel lv2-devel $REPS -y
   sudo dnf update -y
   
-# Installing TeamViewer, apt packages and system updates
+# Installing apt packages and system updates
 
 elif command -v apt > /dev/null 2>&1; then
   sudo apt install nala -y
