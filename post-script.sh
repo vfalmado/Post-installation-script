@@ -36,6 +36,7 @@ org.onlyoffice.desktopeditors
 org.openandroidinstaller.OpenAndroidInstaller
 org.openttd.OpenTTD
 org.librehunt.Organizer
+com.protonvpn.www
 org.libretro.RetroArch
 com.spotify.Client
 io.github.mfat.sshpilot
@@ -69,7 +70,7 @@ fi
 
 # Adding flathub, installing flatpak packages, and updating flatpaks
 
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo -y
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub $FLATPAKS -y
 flatpak update -y
 
@@ -77,8 +78,8 @@ flatpak update -y
 
 wget https://github.com/Diolinux/PhotoGIMP/releases/download/1.1/PhotoGIMP.zip
 unzip PhotoGIMP.zip
-mv PhotoGIMP-master/.local ~
-mv PhotoGIMP-master/.var ~
+rsync -av PhotoGIMP-master/.local ~
+rsync -av PhotoGIMP-master/.var ~
 wget https://github.com/0x192/universal-android-debloater/releases/download/0.5.1/uad_gui-linux.tar.gz
 tar -xzf uad_gui-linux.tar.gz
 curl -fsSL https://linux.toys/install.sh | bash
@@ -96,7 +97,7 @@ if command -v pacman > /dev/null 2>&1; then
 # Installing dnf packages and system updates 
 
 elif command -v dnf > /dev/null 2>&1; then
-  sudo dnf install fd-find glibc-devel cairo-devel libX11-devel xorg-x11-proto-devel lv2-devel $REPS -y
+  sudo dnf install fd-find glibc-devel cairo-devel libX11-devel xorg-x11-proto-devel lv2-devel $REPS --skip-unavailable -y
   sudo dnf update -y
   
 # Installing apt packages and system updates
